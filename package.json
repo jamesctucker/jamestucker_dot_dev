@@ -12,5 +12,8 @@
   "dependencies": {
     "@astrojs/node": "^9.5.0",
     "astro": "^5.15.8"
+  },
+  "devDependencies": {
+    "sass": "^1.94.2"
   }
 }

@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntry, render } from "astro:content";
+
+// 1. Get the id from the incoming server request
+const { id } = Astro.params;
+if (id === undefined) {
+  return Astro.redirect("/404");
+}
+
+// 2. Query for the entry directly using the request slug
+const post = await getEntry("blog", id);
+
+// 3. Redirect if the entry does not exist
+if (post === undefined) {
+  return Astro.redirect("/404");
+}
+
+// 4. Render the entry to HTML in the template
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <article>
+    <h1>{post.data.title}</h1>
+    <p class="meta">
+      Published: {post.data.publishedAt.toLocaleDateString()} • Tags: {
+        post.data.tags.join(", ")
+      }
+    </p>
+    <Content />
+  </article>
+</Layout>
+
+<style lang="scss">
+  @import "../../styles/theme.scss";
+
+  article {
+    max-width: 65ch;
+
+    h1 {
+      margin-bottom: $space-sm;
+    }
+
+    .meta {
+      color: $color-text-secondary;
+      font-size: $font-size-sm;
+      margin-bottom: $space-xl;
+    }
+  }
+</style>

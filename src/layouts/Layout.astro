@@ -15,11 +15,15 @@ const { title } = Astro.props;
   <body>
     <nav>
       <a class="home-link" href="/">James Tucker</a>
-      <a class="secondary-link" href="/about">About</a>
+      <div class="secondary-links">
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+      </div>
     </nav>
     <main>
       <slot />
     </main>
+    <footer><p>© 2025 James Tucker</p></footer>
   </body>
 </html>
 
@@ -28,26 +32,47 @@ const { title } = Astro.props;
 
   html,
   body {
-    max-width: 769px;
     height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    max-width: 769px;
     margin: 0 auto;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
-    padding: 8px 16px;
+    padding: $space-sm $space-md;
+    flex-shrink: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  main {
+    flex: 1;
+    padding: $space-md;
+  }
+
+  footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: $space-md;
+    font-size: $font-size-sm;
   }
 
   .home-link {
     font-size: $font-size-xl;
   }
 
-  .secondary-link {
+  .secondary-links {
+    display: flex;
+    gap: $space-md;
     font-size: $font-size-lg;
-  }
-
-  main {
-    padding: 16px;
   }
 </style>

@@ -81,16 +81,19 @@ h6 {
 }
 
 p {
-  margin-bottom: $space-md;
   line-height: $line-height-relaxed;
 }
 
 a {
   color: $color-text-primary;
   transition: color $transition-base;
+  text-decoration: none;
 
   &:hover {
-    color: $color-secondary;
+    color: $color-text-secondary;
+    text-decoration: underline;
+    
+    text-decoration-color: $color-text-secondary;
   }
 
   &:focus {

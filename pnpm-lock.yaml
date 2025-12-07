@@ -14,12 +14,12 @@ importers:
       '@astrojs/node':
         specifier: ^9.5.0
         version: 9.5.0(astro@5.15.8(@types/node@24.10.1)(rollup@4.53.2)(sass@1.94.2)(typescript@5.9.3))
-      '@fontsource-variable/figtree':
-        specifier: ^5.2.10
-        version: 5.2.10
-      '@fontsource-variable/literata':
-        specifier: ^5.2.8
-        version: 5.2.8
+      '@fontsource-variable/atkinson-hyperlegible-next':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource/source-serif-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
       astro:
         specifier: ^5.15.8
         version: 5.15.8(@types/node@24.10.1)(rollup@4.53.2)(sass@1.94.2)(typescript@5.9.3)
@@ -244,11 +244,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/figtree@5.2.10':
-    resolution: {integrity: sha512-a5Gumbpy3mdd+Yg31g6Qb7CmjYbrfyutJa3bWfP5q8A4GclIOwX7mI+ZuSHsJnw/mHvW6r9oh1AHJcJTIxK4JA==}
+  '@fontsource-variable/atkinson-hyperlegible-next@5.2.6':
+    resolution: {integrity: sha512-D0Z8peFkRGYACvmWp8Sl8YPGYLBEJbzqapugtsMEYSUUtpQDiZVDHjk9s7bqB4hSCRYCrKuW6V1V+mnHybVnPw==}
 
-  '@fontsource-variable/literata@5.2.8':
-    resolution: {integrity: sha512-LhxHyo0lDNu2w8FJ7OfTZl6kT8pDYhXiCmWxFAqpUmOqHz1z3OWOaaWBDVOCDOE8b+GWJQX9HYHZ2CERQjjlWA==}
+  '@fontsource/source-serif-pro@5.2.5':
+    resolution: {integrity: sha512-MTsjMrl2+81dar37wV1taDYzU+o9ArcuBVBkXRNb6JuNCBmrKOIAAmI1wC3cE+Q0eAlgXlfNrvZ7swP3l2M8tQ==}
 
   '@img/colour@1.0.0':
     resolution: {integrity: sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw==}
@@ -2035,9 +2035,9 @@ snapshots:
   '@esbuild/win32-x64@0.25.12':
     optional: true
 
-  '@fontsource-variable/figtree@5.2.10': {}
+  '@fontsource-variable/atkinson-hyperlegible-next@5.2.6': {}
 
-  '@fontsource-variable/literata@5.2.8': {}
+  '@fontsource/source-serif-pro@5.2.5': {}
 
   '@img/colour@1.0.0':
     optional: true

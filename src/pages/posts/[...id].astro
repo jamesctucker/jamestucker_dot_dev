@@ -24,8 +24,12 @@ const { Content } = await render(post);
   <article>
     <h1>{post.data.title}</h1>
     <p class="meta">
-      Published: {post.data.publishedAt.toLocaleDateString()} • Tags: {
-        post.data.tags.join(", ")
+      {
+        post.data.publishedAt.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })
       }
     </p>
     <Content />

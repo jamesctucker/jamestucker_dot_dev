@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const posts = await getCollection("blog");
+---
+
+<Layout title="Writing">
+  <h2 class="page-title">Writing</h2>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a class="post-link" href={`/posts/${post.id}`}>
+            <span class="post-title">{post.data.title}</span>
+            <hr class="post-divider" />
+            <span class="published-at">
+              {post.data.publishedAt.toLocaleDateString()}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style lang="scss">
+  @import "../styles/theme.scss";
+
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post-divider {
+    flex: 1 1 auto;
+    height: 1px;
+    border: none;
+    border-top: 1px dotted $color-border;
+    background-color: none;
+    min-width: 1rlh;
+    margin: 0 $space-sm;
+  }
+</style>

@@ -26,48 +26,40 @@ body {
 
 h1 {
   font-family: $font-family-serif;
-  font-size: $font-size-4xl;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-medium;
   line-height: $line-height-tight;
   margin-bottom: $space-md;
-
-  @include respond-to("md") {
-    font-size: $font-size-5xl;
-  }
 }
 
 h2 {
   font-family: $font-family-serif;
-  font-size: $font-size-3xl;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-medium;
   line-height: $line-height-tight;
   margin-bottom: $space-md;
-
-  @include respond-to("md") {
-    font-size: $font-size-4xl;
-  }
 }
 
 h3 {
   font-family: $font-family-serif;
-  font-size: $font-size-2xl;
-  font-weight: $font-weight-semibold;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-medium;
   line-height: $line-height-tight;
   margin-bottom: $space-sm;
 }
 
 h4 {
   font-family: $font-family-serif;
-  font-size: $font-size-xl;
-  font-weight: $font-weight-semibold;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
   line-height: $line-height-normal;
   margin-bottom: $space-sm;
 }
 
 h5 {
   font-family: $font-family-serif;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
   line-height: $line-height-normal;
   margin-bottom: $space-sm;
 }
@@ -75,7 +67,7 @@ h5 {
 h6 {
   font-family: $font-family-serif;
   font-size: $font-size-base;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-medium;
   line-height: $line-height-normal;
   margin-bottom: $space-sm;
 }
@@ -102,20 +94,15 @@ a {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 ul,
 ol {
-  margin-left: $space-lg;
   margin-bottom: $space-md;
 }
 
 li {
   margin-bottom: $space-sm;
 }
-
-// button {
-
-// }
-
-// .text-primary {
-//   color: $color-text-primary;
-// }
